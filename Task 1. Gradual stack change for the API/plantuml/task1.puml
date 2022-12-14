@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+package "Sytem adm. team" {
+    [Balancer]
+}
+
+package "Dev. team" {
+    [Legacy API (Java)]
+    [New API (Golang)]
+}
+
+IN --> Balancer
+[Balancer] --> [Legacy API (Java)]
+[Balancer] --> [New API (Golang)]
+@enduml
